@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-OAuth/xwcloud-OAuth.iml" filepath="$PROJECT_DIR$/xwcloud-OAuth/xwcloud-OAuth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-caiwu/xwcloud-caiwu.iml" filepath="$PROJECT_DIR$/xwcloud-caiwu/xwcloud-caiwu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-common/xwcloud-common.iml" filepath="$PROJECT_DIR$/xwcloud-common/xwcloud-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-gateway/xwcloud-gateway.iml" filepath="$PROJECT_DIR$/xwcloud-gateway/xwcloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-generator/xwcloud-generator.iml" filepath="$PROJECT_DIR$/xwcloud-generator/xwcloud-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-homeschool/xwcloud-homeschool.iml" filepath="$PROJECT_DIR$/xwcloud-homeschool/xwcloud-homeschool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-model/xwcloud-model.iml" filepath="$PROJECT_DIR$/xwcloud-model/xwcloud-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-oa/xwcloud-oa.iml" filepath="$PROJECT_DIR$/xwcloud-oa/xwcloud-oa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-overall/xwcloud-overall.iml" filepath="$PROJECT_DIR$/xwcloud-overall/xwcloud-overall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-pkxk/xwcloud-pkxk.iml" filepath="$PROJECT_DIR$/xwcloud-pkxk/xwcloud-pkxk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-stu/xwcloud-stu.iml" filepath="$PROJECT_DIR$/xwcloud-stu/xwcloud-stu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-sys/xwcloud-sys.iml" filepath="$PROJECT_DIR$/xwcloud-sys/xwcloud-sys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-wsc/xwcloud-wsc.iml" filepath="$PROJECT_DIR$/xwcloud-wsc/xwcloud-wsc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xwcloud-zsbm/xwcloud-zsbm.iml" filepath="$PROJECT_DIR$/xwcloud-zsbm/xwcloud-zsbm.iml" />
+    </modules>
+  </component>
+</project>

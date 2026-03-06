@@ -1,0 +1,144 @@
+server:
+  port: 8130
+
+spring:
+  application:
+    name: xwcloud-sys
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 116.55.251.61:8848
+  rabbitmq:
+    host: 116.55.251.61
+    port: 9968   #原端口5672
+    username: admin
+    password: xw123!@#
+    publisher-confirm-type: correlated
+  datasource:
+    dynamic:
+      p6spy: true
+      druid:
+        filters: stat
+      datasource:
+        master:
+          url: jdbc:mysql://116.55.251.61:3330/xjbdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
+          username: root
+          password: xw3q!@#$%^
+          #driver-class-name: com.mysql.cj.jdbc.Driver
+          driver-class-name: com.mysql.jdbc.Driver
+          druid: #这里可以重写默认值
+            initial-size: 5
+
+  zipkin: #链路追踪
+    base-url: http://116.55.251.61:9948/ #zipkin server的请求地址,原端口9411
+    discoveryClientEnabled: false #让nacos把它当成一个URL，而不要当做服务名
+    sleuth:
+      sampler:
+        probability: 1.0 #采样的百分比
+  aop:
+    auto:true
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    host: 116.55.251.61
+    port: 9928  #6379
+    password:
+    database: 0
+    lettuce:
+      pool:
+        max-active: 32
+        max-wait: 300ms
+        max-idle: 16
+        min-idle: 8
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#  打开feign熔断
+feign:
+  sentinel:
+    enabled: true
+  client:
+    default:
+      #这里时间一定要调长，否则feign客户端会报ReadTimeOut  服务端报Error parsing HTTP request header
+      connectTimeout: 60000
+      readTimeout: 60000
+  hystrix:
+    enabled: false
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  # 同一实例最大重试次数，不包括首次调用。默认值为0
+  MaxAutoRetries: 0
+  # 同一个微服务其他实例的最大重试次数，不包括第一次调用的实例。默认值为1
+  MaxAutoRetriesNextServer: 0
+  # 是否所有操作（GET、POST等）都允许重试。默认值为false
+  OkToRetryOnAllOperations: false
+
+logging:
+  level:
+    com.baomidou: debug
+    org.springframework.jdbc.datasource.init: debug
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  global-config:
+    #刷新mapper 调试神器
+    db-config:
+      #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+      table-underline: false
+    refresh: true
+      #自定义填充策略接口实现
+      #meta-object-handler: com.baomidou.springboot.xxx
+    #自定义SQL注入器
+    #sql-injector: com.baomidou.springboot.xxx
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true #配置的缓存的全局开关
+    lazyLoadingEnabled: true #延时加载的开关
+    multipleResultSetsEnabled: true #开启的话，延时加载一个属性时会加载该对象全部属性，否则按需加载属性
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句,调试用
+    jdbc-type-for-null: 'null' #配置传入空值
+
+security:
+  oauth2:
+    resource:
+      ####从认证授权中心上验证token
+      tokenInfoUri: https://www3.xw3q.com/xwcloud-oauth/oauth/check_token
+      user-info-uri: https://www3.xw3q.com/xwcloud-oauth/user
+      preferTokenInfo: true
+    client:
+      accessTokenUri: https://www3.xw3q.com/xwcloud-oauth/oauth/token
+      userAuthorizationUri: https://www3.xw3q.com/xwcloud-oauth/oauth/authorize
+      ###appid
+      clientId: web
+      ###appSecret
+      clientSecret: 123456
+
+xw:
+  SERVER_GATEWAY: 116.55.251.61:8100
+
+#xw:
+#  auth_server: http://116.55.251.18:8100/xwcloud-oauth/staff/login  # Swagger中认证请求地址
+#  redisFailTime: 800 #  Redis失效时间 15分钟
+#  oaDB: jdbc:mysql://116.55.251.18:3330/xjbdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
+#  oaUsername: root
+#  oaPassword: 123456
+#  oaDriver: com.mysql.cj.jdbc.Driver
+#servlet:
+#  multipart:
+#    max-file-size: 3024MB
+#    max-request-size: 3024MB
+
+#  #七牛云配置
+#  # 七牛密钥，配上自己申请的七牛账号对应的密钥
+#  qiniu:
+#    AccessKey:nbRdDTLM9eq3TPj6nW4WD6WgGzUhzbXXtCHGO6EH
+#    SecretKey:j622Rbc1zO3S-bVuMrqhg0UAF9293-bZLMDHlIlb
+#    # 七牛空间名
+#    Bucket:px11
+#    BucketUrl:imgs.xx586.com

@@ -1,0 +1,8 @@
+com\xwcloud\cloud\gateway\Filer\TokenFiler.class
+com\xwcloud\cloud\gateway\Sentinel\SentinelExceptionHandler.class
+com\xwcloud\cloud\gateway\config\CorsConfig.class
+com\xwcloud\cloud\gateway\GatewayApplication.class
+com\xwcloud\cloud\gateway\config\SwaggerProvider.class
+com\xwcloud\cloud\gateway\config\HttpsToHttpFilter.class
+com\xwcloud\cloud\gateway\config\SwaggerController.class
+com\xwcloud\cloud\gateway\Filer\AuthFiler.class

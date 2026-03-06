@@ -1,0 +1,21 @@
+package com.xwcloud.cloud.wsc.Service.impl;
+
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.xwcloud.cloud.model.entity.WscMiaoshaHuodonginfo;
+import com.xwcloud.cloud.wsc.Dao.IWscMiaoshaHuodonginfoDao;
+import com.xwcloud.cloud.wsc.Service.IWscMiaoshaHuodonginfoService;
+import org.springframework.stereotype.Service;
+
+/**
+ * <p>
+ *  服务实现类
+ * </p>
+ *
+ * @author xiaowei
+ * @since 2021-06-03
+ */
+@Service
+public class WscMiaoshaHuodonginfoServiceImpl extends ServiceImpl<IWscMiaoshaHuodonginfoDao, WscMiaoshaHuodonginfo> implements IWscMiaoshaHuodonginfoService {
+	
+}

@@ -1,0 +1,17 @@
+package com.xwcloud.cloud.zsbm.Service;
+
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.xwcloud.cloud.model.entity.Pxzhaoshenmubiaostafftable;
+
+/**
+ * <p>
+ * 服务类
+ * </p>
+ *
+ * @author xiaowei
+ * @since 2020-11-26
+ */
+public interface IPxzhaoshenmubiaostafftableService extends IService<Pxzhaoshenmubiaostafftable> {
+
+}

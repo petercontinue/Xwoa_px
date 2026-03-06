@@ -1,0 +1,38 @@
+package com.xwcloud.cloud.caiwu.Dao;
+
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.xwcloud.cloud.model.entity.Tuichongzhiyuesp;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * <p>
+ * Mapper 接口
+ * </p>
+ *
+ * @author xiaowei
+ * @since 2021-07-16
+ */
+@Repository
+public interface ITuichongzhiyuespDao extends BaseMapper<Tuichongzhiyuesp> {
+
+    @Results(id = "BaseResultMap", value = {
+            @Result(column = "id", property = "id"),
+            @Result(column = "tfspID", property = "tfspID"),
+            @Result(column = "beforetuiMoney", property = "beforetuiMoney"),
+            @Result(column = "tuiyue", property = "tuiyue"),
+            @Result(column = "aftertuiMoney", property = "aftertuiMoney"),
+            @Result(column = "addTime", property = "addTime"),
+            @Result(column = "addUser", property = "addUser"),
+            @Result(column = "qiyeID", property = "qiyeID"),
+    })
+    @Select("<script>" +
+            "SELECT * from  tuichongzhiyuesp"
+            + "</script>")
+    List<Tuichongzhiyuesp> getAllList();
+}

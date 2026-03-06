@@ -1,0 +1,42 @@
+package com.xwcloud.cloud.sys.Dao;
+
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.xwcloud.cloud.model.entity.WscOrdergoods;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * <p>
+ * Mapper 接口
+ * </p>
+ *
+ * @author xiaowei
+ * @since 2021-07-29
+ */
+@Repository
+public interface IWscOrdergoodsDao extends BaseMapper<WscOrdergoods> {
+
+    @Results(id = "BaseResultMap", value = {
+            @Result(column = "id", property = "id"),
+            @Result(column = "orderNumber", property = "orderNumber"),
+            @Result(column = "goodsID", property = "goodsID"),
+            @Result(column = "goodsshuxinglistpriceID", property = "goodsshuxinglistpriceID"),
+            @Result(column = "pingtuanFaqiRenID", property = "pingtuanFaqiRenID"),
+            @Result(column = "huodongID", property = "huodongID"),
+            @Result(column = "nums", property = "nums"),
+            @Result(column = "payMoney", property = "payMoney"),
+            @Result(column = "pingjia", property = "pingjia"),
+            @Result(column = "pingjiaType", property = "pingjiaType"),
+            @Result(column = "pingjiaDate", property = "pingjiaDate"),
+            @Result(column = "qiyeID", property = "qiyeID"),
+    })
+    @Select("<script>" +
+            "SELECT * from  wsc_ordergoods"
+            + "</script>")
+    List<WscOrdergoods> getAllList();
+}

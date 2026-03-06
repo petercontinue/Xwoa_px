@@ -1,0 +1,13 @@
+ali:
+  oss:
+      ENDPOINT: https://oss-cn-beijing.aliyuncs.com    # 外网访问节点
+      accessKeyId: ${ALI_OSS_ID}          # 建议这里引用环境变量，更安全
+      ACCESSKEYSECRET: ${ALI_OSS_SECRET}  # 建议这里引用环境变量，更安全
+      BUCKETNAME: xjbok-oss   # 仓库名称
+      SUFFER_URL: https://xjbok-oss.oss-cn-beijing.aliyuncs.com/  # 上传成功后返回的URL
+
+sms:
+    ACCESSKEYID: ${ALIYUN_SMS_KEY}         # 建议这里引用环境变量，更安全
+    ACCESSKEYSECRET: ${ALIYUN_SMS_SECRET}  # 建议这里引用环境变量，更安全
+    SIGNNAME: 校君宝
+    TEMPLATECODE: SMS_217910051

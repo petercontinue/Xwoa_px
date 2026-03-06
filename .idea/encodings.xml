@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-OAuth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-caiwu/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-homeschool/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-oa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-overall/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-pkxk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-stu/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-sys/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-wsc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xwcloud-zsbm/src/main/java" charset="UTF-8" />
+  </component>
+</project>

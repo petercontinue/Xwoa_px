@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xwcloud-stu" />
+        <module name="xwcloud-homeschool" />
+        <module name="xwcloud-sys" />
+        <module name="xwcloud-caiwu" />
+        <module name="xwcloud-pkxk" />
+        <module name="xwcloud-generator" />
+        <module name="xwcloud-wsc" />
+        <module name="xwcloud-OAuth" />
+        <module name="xwcloud-oa" />
+        <module name="xwcloud-zsbm" />
+        <module name="xwcloud-overall" />
+        <module name="xwcloud-gateway" />
+        <module name="xwcloud-common" />
+        <module name="xwcloud-model" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Xwoa_px" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="xwcloud-OAuth" options="-parameters" />
+      <module name="xwcloud-caiwu" options="-parameters" />
+      <module name="xwcloud-common" options="-parameters" />
+      <module name="xwcloud-gateway" options="-parameters" />
+      <module name="xwcloud-generator" options="-parameters" />
+      <module name="xwcloud-homeschool" options="-parameters" />
+      <module name="xwcloud-model" options="-parameters" />
+      <module name="xwcloud-oa" options="-parameters" />
+      <module name="xwcloud-overall" options="-parameters" />
+      <module name="xwcloud-pkxk" options="-parameters" />
+      <module name="xwcloud-stu" options="-parameters" />
+      <module name="xwcloud-sys" options="-parameters" />
+      <module name="xwcloud-wsc" options="-parameters" />
+      <module name="xwcloud-zsbm" options="-parameters" />
+    </option>
+  </component>
+</project>

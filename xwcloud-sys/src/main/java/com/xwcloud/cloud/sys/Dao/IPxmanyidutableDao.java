@@ -1,0 +1,41 @@
+package com.xwcloud.cloud.sys.Dao;
+
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.xwcloud.cloud.model.entity.Pxmanyidutable;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * <p>
+ *  Mapper 接口
+ * </p>
+ *
+ * @author xiaowei
+ * @since 2021-07-29
+ */
+@Repository
+public interface IPxmanyidutableDao extends BaseMapper<Pxmanyidutable> {
+
+    @Results(id = "BaseResultMap", value = {
+                @Result(column = "id", property = "id"),
+                @Result(column = "weixinmessageId", property = "weixinmessageId"),
+                @Result(column = "stuId", property = "stuId"),
+                @Result(column = "TeachingLevelOfTeachers", property = "teachingLevelOfTeachers"),
+                @Result(column = "TeachingEffectOfTeachers", property = "teachingEffectOfTeachers"),
+                @Result(column = "ServiceAttitude", property = "serviceAttitude"),
+                @Result(column = "SchoolManagementNorms", property = "schoolManagementNorms"),
+                @Result(column = "SchoolFacilities", property = "schoolFacilities"),
+                @Result(column = "pingjiaDate", property = "pingjiaDate"),
+                @Result(column = "concent", property = "concent"),
+                @Result(column = "qiyeID", property = "qiyeID"),
+    })
+    @Select("<script>" +
+            "SELECT * from  pxmanyidutable"
+            + "</script>")
+    List<Pxmanyidutable> getAllList();
+}

@@ -1,0 +1,36 @@
+package com.xwcloud.cloud.sys.Dao;
+
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.xwcloud.cloud.model.entity.Pxdaohangtable;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * <p>
+ *  Mapper 接口
+ * </p>
+ *
+ * @author xiaowei
+ * @since 2021-07-30
+ */
+@Repository
+public interface IPxdaohangtableDao extends BaseMapper<Pxdaohangtable> {
+
+    @Results(id = "BaseResultMap", value = {
+                @Result(column = "id", property = "id"),
+                @Result(column = "menuID", property = "menuID"),
+                @Result(column = "text", property = "text"),
+                @Result(column = "url", property = "url"),
+                @Result(column = "iconClass", property = "iconClass"),
+                @Result(column = "qiyeID", property = "qiyeID"),
+    })
+    @Select("<script>" +
+            "SELECT * from  pxdaohangtable"
+            + "</script>")
+    List<Pxdaohangtable> getAllList();
+}
